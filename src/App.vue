@@ -1,19 +1,19 @@
 <template>
 <img alt="Vue logo" src="./assets/logo.png">
-<HelloWorld msg="Welcome to My first Vue.js App" />
+<!-- <HelloWorld msg="Welcome to My first Vue.js App" /> -->
 <!-- <HomeVue /> -->
 <Ashadozzaman />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 // import HomeVue from './components/Home.vue'
 import Ashadozzaman from './components/Ashadozzaman.vue'
 
 export default {
     name: 'App',
     components: {
-        HelloWorld,
+        //HelloWorld,
         // HomeVue,
         Ashadozzaman
     }
