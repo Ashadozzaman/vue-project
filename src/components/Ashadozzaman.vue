@@ -1,9 +1,12 @@
 <template>
-<h1>Ashadozzaman Component</h1>
-<h2>Id: {{Id}}</h2>
-<h2>FullName: {{FullName}}</h2>
+<h1> Component</h1>
+<!-- <h2>Id: {{Id}}</h2>
+<h2>FullName: {{FullName}}</h2> 
 <h2>Degree: {{getStudentDetails('PSD').degree}}</h2>
-<p>Data: {{getAllData()}}</p>
+<p>Data: {{getAllData()}}</p> -->
+<button v-on:click="clickEvent()">Button 1</button>
+<button v-on:dblclick="dblclickEvent()">Button DBL</button>
+<h2>{{count}}</h2>
 </template>
 
 <script>
@@ -18,7 +21,8 @@ export default {
                     degree: a,
                     vercity: 'GU',
                 };
-            }
+            },
+            count:0,
         }
     },
     methods: {
@@ -27,6 +31,12 @@ export default {
                 name: this.FullName,
                 id: this.Id,
             }
+        },
+        clickEvent(){
+            this.count = this.count+1;
+        },
+        dblclickEvent(){
+            alert('dbl click');
         }
     }
 }
