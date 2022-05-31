@@ -5,7 +5,10 @@
 <h2>Degree: {{getStudentDetails('PSD').degree}}</h2>
 <p>Data: {{getAllData()}}</p> -->
 <button v-on:click="clickEvent()">Button 1</button>
-<button v-on:dblclick="dblclickEvent()">Button DBL</button>
+<button v-on:dblclick="dblclickEvent()">Button DBL</button><br>
+<input type="text" v-model="count">
+<!-- v-modela use for two data binding -->
+
 <h2>{{count}}</h2>
 </template>
 
@@ -22,7 +25,7 @@ export default {
                     vercity: 'GU',
                 };
             },
-            count:0,
+            count: 0,
         }
     },
     methods: {
@@ -32,10 +35,10 @@ export default {
                 id: this.Id,
             }
         },
-        clickEvent(){
-            this.count = this.count+1;
+        clickEvent() {
+            this.count = this.count + 1;
         },
-        dblclickEvent(){
+        dblclickEvent() {
             alert('dbl click');
         }
     }
